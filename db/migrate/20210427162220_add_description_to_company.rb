@@ -1,5 +1,5 @@
 class AddDescriptionToCompany < ActiveRecord::Migration[6.1]
   def change
-    add_column :company, :description, :text
+    add_column :companies, :description, :text
   end
 end

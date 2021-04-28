@@ -1,7 +1,7 @@
 class Company < ApplicationRecord
 
-    belongs_to :company 
-    belongs_to :user
+    has_many :job_applications 
+    has_many :users, through: :job_applications
 
 
 
@@ -11,12 +11,6 @@ class Company < ApplicationRecord
 
     def self.newest_companies
         Company.order(created_at: :desc).limit(5)
-    end
-
-    def company_attributes=(hash_of_attributes) #custom writer
-        if !hash_of_attributes[:title].blank? && !hash_of_attributes[:genre].blank? && !hash_of_attributes[:difficulty].blank?
-            self.company = Company.find_or_create_by(hash_of_attributes)
-        end
     end
 
 end
