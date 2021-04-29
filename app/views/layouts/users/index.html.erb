@@ -1,0 +1,28 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1 style="color: #501B1D; text-align:center">Browse All the Jobs and Companies:</h1>
+
+   <% @users.each do |user| %>
+<li style="list-style-type:none; color: #2E1114; text-align:center"> <%= link_to user.username, user_path(user) %></li>
+<% end %> 
+</div>
+
+ <style>
+body {
+  background: url('https://images.unsplash.com/photo-1495667496513-9068843d7679?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fHdpdGNofGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.container { 
+background-color: rgba(100%, 100%, 100%, .7);
+border: 2px #83677B;
+border-radius: 100px; 
+}
+</style>

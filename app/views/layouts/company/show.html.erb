@@ -3,28 +3,28 @@
 <br>
 <br>
 <div class="container">
-<h1 style="color: #2E1114; text-align:center">Spellbook Information</h1>
+<h1 style="color: #2E1114; text-align:center">Company Information</h1>
 
 <p style="color: #2E1114; text-align:center">
-Title: <%= @spellbook.title %>
-Category: <%= @spellbook.category %>
-Level: <%= @spellbook.level %>
+Title: <%= @company.title %>
+Category: <%= @company.category %>
+Level: <%= @company.level %>
 </p>
 <div style="color: #501B1D; text-align:center">
-<%= link_to "add spell for this spellbook", new_spellbook_spell_path(@spellbook) %>
+<%= link_to "add job for this company", new_company_job_path(@company) %>
 </div>
  <div style="color: #501B1D; text-align:center">
     
-        <!--<%= link_to "edit", edit_spellbook_path(@spellbook) %>
-          <%= link_to "delete", spellbook_path(@spellbook), method: 'DELETE' %>-->
+        <!--<%= link_to "edit", edit_company_path(@company) %>
+          <%= link_to "delete", company_path(@company), method: 'DELETE' %>-->
   
         </div>
 
-<h5 style="color: #2E1114; text-align:center">All Spells within this Spellbook</h5>
+<h5 style="color: #2E1114; text-align:center">All Jobs within this Company</h5>
 
 
 
-<h6 style="color: #2E1114; text-align:center"><%= render @spellbook.spells %></h6>
+<h6 style="color: #2E1114; text-align:center"><%= render @company.jobs %></h6>
 
 </div>
 

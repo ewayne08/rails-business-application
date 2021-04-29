@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1 style="color: #501B1D; text-align:center">All Jobs</h1>
+
+<% @spells.each do |job| %>
+<li style="color: #501B1D; text-align:center"> <%= link_to job.name, job_path(job) %></li>
+<% end %>
+
+</div>
+<br>
+<br>
+<br>
+
+
+
+  <style>
+body {
+  background: url('https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fG1hZ2ljJTIwaW5ncmVkaWVudHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.container { 
+background-color: rgba(100%, 100%, 100%, .3);
+border: 2px #83677B;
+border-radius: 100px; 
+}
+</style>

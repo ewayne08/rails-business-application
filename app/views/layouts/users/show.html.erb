@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+<div class="container" >
+<h1 style="color: #ADADAD; text-align:center"><%= @user.username%>'s bubble</h1>
+
+  <p style="text-align:center"><img class="center, rounded-circle" height="200" width="300" src="<%= @user.profile_pic %>"></p>
+  <br><br>
+  <p style="color: #ADADAD;  text-align:center"><%= @user.bio %></p>
+<br>
+</div>
+
+
+
+<style>
+body {
+  background: url('https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8d2l0Y2h8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.container { 
+background-color: rgba(100%, 100%, 100%, .1);
+border: 2px #83677B;
+border-radius: 100px; 
+}
+
+.circle {
+  width: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+</style>

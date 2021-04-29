@@ -4,16 +4,16 @@
 <br>
 <br>
 <div class="container">
-<h1 style="color: #2E1114; text-align:center"> All Spellbooks:</h1>
+<h1 style="color: #2E1114; text-align:center"> All Companies:</h1>
 <ul style="list-style-type:none; color: #2E1114; text-align:center">
-<% @spellbooks.each do |spellbook| %>
-<li> <%= link_to spellbook.title, spellbook_path(spellbook)%> </li>
+<% @companies.each do |company| %>
+<li> <%= link_to company.title, company_path(company)%> </li>
 <% end %>
 </ul>
 
 <br><br>
 <div style="list-style-type:none; color: #2E1114; text-align:center">
-<%= link_to "Click to view the 5 newest spellbooks cast into the portal...", recent_spellbooks_path, class: "btn" %>
+<%= link_to "Click to view the 5 newest companies cast into the system...", recent_companies_path, class: "btn" %>
 </div>
 </div>
 

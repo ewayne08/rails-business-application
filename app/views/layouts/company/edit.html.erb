@@ -5,22 +5,22 @@
 <br>
 <br>
 <div class="container" style= "text-align:center">
-<h1 style="color: #2E1114; text-align:center">Edit Spellbook</h1>
+<h1 style="color: #2E1114; text-align:center">Edit Company</h1>
 
-    <% if @spellbook.errors.any? %>
+    <% if @company.errors.any? %>
     <div style="list-style-type:none; color: #2E1114; text-align:center" id="error explanation">
-        <h2 style="list-style-type:none; color: #2E1114; text-align:center"><%= pluralize(@spellbook.errors.count, "error") %> prevented this Spellbook from being saved: </h2>
+        <h2 style="list-style-type:none; color: #2E1114; text-align:center"><%= pluralize(@company.errors.count, "error") %> prevented this Company from being saved: </h2>
         <ul style="list-style-type:none; color: #2E1114; text-align:center">
-        <% @spellbook.errors.full_messages.each do |error| %>
+        <% @company.errors.full_messages.each do |error| %>
         <li> <%= error %></li>
         <% end %>
         </ul>
     </div>
     <% end %>
 
-    <%= form_for @spellbook do |f| %>
+    <%= form_for @company do |f| %>
         <%= render partial: "form", locals: {partial_form: f }%>
-    <%= f.submit "Update your spellbook" %>
+    <%= f.submit "Update your company" %>
     <% end %>
 </div>
 
