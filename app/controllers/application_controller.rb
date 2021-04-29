@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     end
 
 
-    def find_job_applications
-        @job_applications = JobApplications.find(params[:id])
+    def find_job
+        @jobs = Jobs.find(params[:id])
     end
 end

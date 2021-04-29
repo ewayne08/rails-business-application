@@ -1,0 +1,34 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1 style="color: #2E1114; text-align:center"> All Spellbooks:</h1>
+<ul style="list-style-type:none; color: #2E1114; text-align:center">
+<% @spellbooks.each do |spellbook| %>
+<li> <%= link_to spellbook.title, spellbook_path(spellbook)%> </li>
+<% end %>
+</ul>
+
+<br><br>
+<div style="list-style-type:none; color: #2E1114; text-align:center">
+<%= link_to "Click to view the 5 newest spellbooks cast into the portal...", recent_spellbooks_path, class: "btn" %>
+</div>
+</div>
+
+<style>
+body {
+  background: url('https://images.unsplash.com/photo-1540650659171-c24a35e9cd54?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fG1hZ2ljJTIwaW5ncmVkaWVudHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.container { 
+background-color: rgba(100%, 100%, 100%, .6);
+border: 2px #83677B;
+border-radius: 100px; 
+}
+
+</style>

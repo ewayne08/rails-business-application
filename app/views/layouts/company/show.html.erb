@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1 style="color: #2E1114; text-align:center">Spellbook Information</h1>
+
+<p style="color: #2E1114; text-align:center">
+Title: <%= @spellbook.title %>
+Category: <%= @spellbook.category %>
+Level: <%= @spellbook.level %>
+</p>
+<div style="color: #501B1D; text-align:center">
+<%= link_to "add spell for this spellbook", new_spellbook_spell_path(@spellbook) %>
+</div>
+ <div style="color: #501B1D; text-align:center">
+    
+        <!--<%= link_to "edit", edit_spellbook_path(@spellbook) %>
+          <%= link_to "delete", spellbook_path(@spellbook), method: 'DELETE' %>-->
+  
+        </div>
+
+<h5 style="color: #2E1114; text-align:center">All Spells within this Spellbook</h5>
+
+
+
+<h6 style="color: #2E1114; text-align:center"><%= render @spellbook.spells %></h6>
+
+</div>
+
+<style>
+body {
+  background: url('https://images.unsplash.com/photo-1512331455279-c8ae8178f586?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjV8fG1hZ2ljJTIwaW5ncmVkaWVudHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.container { 
+background-color: rgba(100%, 100%, 100%, .6);
+border: 2px #83677B;
+border-radius: 100px; 
+}
+</style>
