@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   
   resources :jobs
   resources :companies do
-    resources :jobs
+  resources :jobs
   end
 
   match '*path' => 'application_controller#fallback', via: [:all] 
