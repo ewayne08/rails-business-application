@@ -1,18 +1,18 @@
-class CompanyController < ApplicationController
+class CompaniesController < ApplicationController
  
     before_action :redirect_if_not_logged_in, :current_user
     before_action :find_company, only: [:show, :edit, :update, :destroy]
     
     def index
-        @company = Company.all 
+        @companies = Company.all 
     end
 
     def show
         find_company 
     end
 
-    def recent_company
-        @company = Company.newest_companies
+    def recent_companies
+        @companies = Company.newest_companies
         render :index
     end
 
@@ -22,7 +22,8 @@ class CompanyController < ApplicationController
 
     def create
         @company = Company.new(company_params)
-        if @Company.save 
+        @company.owner = current_user
+        if @company.save 
             redirect_to company_path(@company)
         else
             render :new
@@ -53,11 +54,9 @@ class CompanyController < ApplicationController
 
     private
 
-    
 
-
-    def companies_params
-        params.require(:company).permit(:title, :category)
+    def company_params
+        params.require(:company).permit(:name, :category)
     end
 
     def find_company

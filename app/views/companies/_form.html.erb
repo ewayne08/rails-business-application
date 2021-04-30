@@ -1,0 +1,7 @@
+<%= partial_form.label(:name) %>
+<%= partial_form.text_field :name %> <br><br>
+<%= partial_form.label(:category) %>
+<%= partial_form.text_field :category %> <br><br>
+<%= partial_form.label(:description) %>
+<%= partial_form.text_field :description %> <br><br>
+<%= partial_form.hidden_field :user_id, value: current_user.id%>

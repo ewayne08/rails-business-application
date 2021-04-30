@@ -1,12 +1,12 @@
 class Company < ApplicationRecord
-
+    belongs_to :owner, class_name: "User", foreign_key: :user_id
     has_many :jobs 
     has_many :users, through: :jobs
 
 
 
     validates :name, :description, presence: true
-    validates :level, presence: true, numericality: {greater_than: 0, less_than_or_equal_to: 10}
+    
 
 
     def self.newest_companies
