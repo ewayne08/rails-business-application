@@ -6,9 +6,9 @@
 <h1 style="color: #2E1114; text-align:center">Company Information</h1>
 
 <p style="color: #2E1114; text-align:center">
-Title: <%= @company.title %>
+Title: <%= @company.name %>
 Category: <%= @company.category %>
-Level: <%= @company.level %>
+Description: <%= @company.description %>
 </p>
 <div style="color: #501B1D; text-align:center">
 <%= link_to "add job for this company", new_company_job_path(@company) %>

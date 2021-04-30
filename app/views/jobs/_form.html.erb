@@ -1,10 +1,10 @@
 <%= render partial: "layouts/error", locals: {object: @job} %>
 
-<%= form_for spell, url:url do |f| %>
+<%= form_for job, url:url do |f| %>
     <%= f.label "Name" %>
     <%= f.text_field :name %> <br>
-    <%= f.label "Level" %> 
-    <%= f.number_field :level %> <br>
+    <%= f.label "Category" %> 
+    <%= f.text_field :category %> <br>
     <%= f.label "Description" %> 
     <%= f.text_area :description %> <br>
     <%= f.hidden_field :company_id %>

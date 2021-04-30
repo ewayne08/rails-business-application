@@ -7,7 +7,7 @@
 <h1 style="color: #2E1114; text-align:center"> All Companies:</h1>
 <ul style="list-style-type:none; color: #2E1114; text-align:center">
 <% @companies.each do |company| %>
-<li> <%= link_to company.title, company_path(company)%> </li>
+<li> <%= link_to company.name, company_path(company)%> </li>
 <% end %>
 </ul>
 

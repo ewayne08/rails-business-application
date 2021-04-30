@@ -56,11 +56,7 @@ class CompaniesController < ApplicationController
 
 
     def company_params
-        params.require(:company).permit(:name, :category)
-    end
-
-    def find_company
-        @company = Company.find_by_id(params[:id])
+        params.require(:company).permit(:name, :category, :description)
     end
 
     def find_company

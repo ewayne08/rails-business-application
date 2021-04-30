@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 
 
     def find_job
-        @jobs = Jobs.find(params[:id])
+        @job = Job.find(params[:id])
     end
     
     

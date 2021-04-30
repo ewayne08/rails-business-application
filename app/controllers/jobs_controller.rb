@@ -56,7 +56,7 @@ class JobsController < ApplicationController
     
     private
     def job_params
-        params.require(:job).permit(:name, :description, :company_id, company_attributes: [:id, :user_id, :title, :category])
+        params.require(:job).permit(:name, :description, :company_id, company_attributes: [:id, :user_id, :name, :category])
     end
 
     def redirect_if_not_company_owner
