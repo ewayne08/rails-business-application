@@ -32,14 +32,14 @@ class UsersController < ApplicationController
         end
     end
 
-    def update
-        @user = User.find_by_id(params[:id])
-        if @user.update(params.require(:user).permit(:username, :profile_pic, :bio))
-            redirect_to user_path(@user)
-            else
-            render :edit
-        end
-    end
+    #def update
+     #   @user = User.find_by_id(params[:id])
+      #  if @user.update(params.require(:user).permit(:username, :profile_pic, :bio))
+       #     redirect_to user_path(@user)
+        #    else
+         #   render :edit
+        #end
+    #end
 
     def destroy
         @user = User.find(params[:id])
