@@ -4,7 +4,7 @@
 <br>
 <div class="container" style="text-align:center">
 <h1 style="color: #501B1D; text-align:center">Create A Job</h1>
-<%= render partial: "form", locals: { job: @job, url: company_jobs_path(@company)} %>
+<%= render partial: "form", locals: { job: @job, url: company_jobs_path(@company), method: :post, company_id: nil} %>
 </div>
    
     <style>

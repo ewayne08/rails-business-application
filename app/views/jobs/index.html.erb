@@ -8,7 +8,7 @@
 <h1 style="color: #501B1D; text-align:center">All Jobs</h1>
 
 <% @jobs.each do |job| %>
-<li style="color: #501B1D; text-align:center"> <%= link_to job.name, job_path(job) %></li>
+<li style="color: #501B1D; text-align:center"> <%= link_to job.name, company_job_path(@company, job.id) %></li>
 <% end %>
 
 </div>

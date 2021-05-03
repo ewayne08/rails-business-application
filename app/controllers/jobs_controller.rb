@@ -7,14 +7,24 @@ class JobsController < ApplicationController
     #macro to run particular method before the action methods below execute. Useful because we're able to create validations as well as queries to populate a specific instance variable that we may use within that method. Decreases lines of code and keeps stuff dry. 
 
     def index
-        if params[:company_id] && @spellbook = Company.find(params[:company_id])
+        #if 
+            params[:company_id] && @company = Company.find(params[:company_id])
+            #@job = Company.jobs.find(params[:job_id])
+        #else
             @jobs = @company.jobs
-        else
-            @jobs = Job.all
-        end
+        #end
+        # if params[:company_id] && @company = Company.find(params[:company_id])
+            #@company = Company.find(params[:company_id])
+            #@job = @company.jobs.find_by_id(params[:id])
+            #@jobs = @company.jobs
+        # else
+            #@jobs = Job.all
+        # end
     end
 
     def show
+        @company = Company.find(params[:company_id])
+        @job = @company.jobs.find(params[:id])
     end
 
     def new
@@ -34,13 +44,14 @@ class JobsController < ApplicationController
     end
 
     def edit
+        @job_id = params[:id]
     end
 
     def update
         @job = Job.find(params[:id])
         @job.update(job_params)
         if @job.valid? 
-            redirect_to job_path(@job)
+            redirect_to company_jobs_path(params[:job][:company_id])
         else
             render :edit
         end

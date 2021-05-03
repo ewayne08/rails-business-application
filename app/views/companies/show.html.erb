@@ -22,9 +22,9 @@ Description: <%= @company.description %>
 
 <h5 style="color: #2E1114; text-align:center">All Jobs within this Company</h5>
 
-
-
-<h6 style="color: #2E1114; text-align:center"><%= render @company.jobs %></h6>
+<%@company.jobs.each do |job|%>
+<h6 style="color: #2E1114; text-align:center"><%= link_to job.name, "/companies/#{@company.id}/jobs/#{job.id}"%></h6>
+<%end%>
 
 </div>
 

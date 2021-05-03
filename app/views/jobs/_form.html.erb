@@ -1,6 +1,7 @@
 <%= render partial: "layouts/error", locals: {object: @job} %>
 
-<%= form_for job, url:url do |f| %>
+<%= form_with model: job, url: url, method: method do |f| %>
+    <%= f.hidden_field "company_id", value: company_id%>
     <%= f.label "Name" %>
     <%= f.text_field :name %> <br>
     <%= f.label "Category" %> 

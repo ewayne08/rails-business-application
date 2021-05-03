@@ -2,7 +2,7 @@
 <div class="container">
 <h1 style="color: #501B1D; text-align:center">Edit job</h1>
 <div style="color: #501B1D; text-align:center">
-<%= render partial: "form", locals: { job: @job, url: job_path(@job)} %>
+<%= render partial: "form", locals: { job: @job, url: job_path(@job), method: :patch, company_id: @company_id} %>
 
 
 </div>
