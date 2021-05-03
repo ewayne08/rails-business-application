@@ -3,6 +3,7 @@ class CompaniesController < ApplicationController
     before_action :redirect_if_not_logged_in, :current_user
     before_action :find_company, only: [:show, :edit, :update, :destroy]
     
+    
     def index
         @companies = Company.all 
     end

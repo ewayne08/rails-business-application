@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
         redirect_to user_path
     end
 
-    #def authorized_to_edit?
-     #   @company.user == current_user
-      #end
 
     private
 

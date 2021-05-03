@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users, except: [:destroy]
   
   get '/companies/recent_companies' => 'companies#recent_companies' , as: 'recent_companies'
+  
 
   
   resources :jobs
