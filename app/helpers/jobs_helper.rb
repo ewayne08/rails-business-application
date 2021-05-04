@@ -14,9 +14,9 @@ module JobsHelper
         content_tag(:h1, "Create a Job")
         end 
    end
-    def book_form_fields(f)
+    def job_form_fields(f)
         if @company   # params[:brand_id]
-         f.hidden_field :book_id, value: @company.id 
+         f.hidden_field :job_id, value: @company.id 
         else 
          render partial: "company_fields", locals: { f: f } 
         end 
