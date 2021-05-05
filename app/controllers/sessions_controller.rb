@@ -26,8 +26,7 @@ class SessionsController < ApplicationController
         end
     end
 
-    def omniauth #if they are logging in with oauth
-        # if that user has already logged in this way
+    def omniauth 
         user = User.find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |u|
             u.email = auth["info"]["email"]
             u.password = SecureRandom.hex(15)
