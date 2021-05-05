@@ -4,8 +4,7 @@ class JobsController < ApplicationController
     before_action :find_job, only: [:show, :edit, :update, :destroy]
     before_action :find_job, only: [:show, :edit, :destroy]
 
-    #macro to run particular method before the action methods below execute. Useful because we're able to create validations as well as queries to populate a specific instance variable that we may use within that method. Decreases lines of code and keeps stuff dry. 
-
+    
     def index
         #if 
             params[:company_id] && @company = Company.find(params[:company_id])
