@@ -6,19 +6,8 @@ class JobsController < ApplicationController
 
     
     def index
-        #if 
             params[:company_id] && @company = Company.find(params[:company_id])
-            #@job = Company.jobs.find(params[:job_id])
-        #else
-            @jobs = @company.jobs
-        #end
-        # if params[:company_id] && @company = Company.find(params[:company_id])
-            #@company = Company.find(params[:company_id])
-            #@job = @company.jobs.find_by_id(params[:id])
-            #@jobs = @company.jobs
-        # else
-            #@jobs = Job.all
-        # end
+            @jobs = @company.jobs  
     end
 
     def show

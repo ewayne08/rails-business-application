@@ -1,24 +1,5 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Things you may want to cover: 
+Welcome to Business-Application. You can start the program by bundle installing followed by rails s in the terminal. This application was inspired from the small start up I'm working for in my free time. We have 2 different AI's one is Ryder which collects data and one is Wesson which is a business management tool integrated with other tools. I thought of all the management we have to do and decided to make this small application which helps businesses/companies keep a list of jobs sorted. Wesson.AI is currently still in development and not yet launched. I think of this application as a very miny Wesson application or even a tool that can be connected to Wesson. I plan on making this an actual application whether it becomes part of Wesson or it's own seperate app. I also want to make my application collect data in the background so I know which companies are using my application and all the jobs they have, along with their R-Ratios and that stuff. Anyway start the application and take a look around!!! To exit the application hit control c in your termianl! Enjoy! 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
