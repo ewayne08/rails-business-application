@@ -10,7 +10,9 @@ Category: <%= @company.category %>
 Description: <%= @company.description %>
 </p>
 <div style="color: #501B1D; text-align:center">
+ <% if current_user.id == @company.user_id %>
 <%= link_to "edit", edit_company_path %> <br>
+  <%end%>
 <%= link_to "add job for this company", new_company_job_path(@company) %>
 </div>
  <div style="color: #501B1D; text-align:center">

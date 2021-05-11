@@ -33,9 +33,10 @@ class CompaniesController < ApplicationController
 
 
     def edit
+        @company = current_user.companies.find(params[:id])
     end
 
-    def update
+    def update   
         @company.update(company_params)
         if @company.valid?
             redirect_to companies_path

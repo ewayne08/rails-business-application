@@ -15,7 +15,7 @@ module JobsHelper
         end 
    end
     def job_form_fields(f)
-        if @company   # params[:brand_id]
+        if @company   
          f.hidden_field :job_id, value: @company.id 
         else 
          render partial: "company_fields", locals: { f: f } 

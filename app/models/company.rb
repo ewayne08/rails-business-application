@@ -7,10 +7,14 @@ class Company < ApplicationRecord
 
     validates :name, :description, presence: true
     
-
-
-    def self.newest_companies
-        Company.order(created_at: :desc).limit(5)
-    end
-
+    scope :newest_companies, -> {order(created_at: :desc).limit(5)}
+    #def self.newest_companies
+     #   Company.order(created_at: :desc).limit(5)
+    #end
+    #MACROS(methods we have access to)
+    #association
+    #association=
+    #build_association
+    #create_association
+    
 end

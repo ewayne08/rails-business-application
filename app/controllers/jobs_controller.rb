@@ -5,7 +5,7 @@ class JobsController < ApplicationController
     before_action :find_job, only: [:show, :edit, :destroy]
 
     
-    def index
+    def index #ADD STUFF TO MAKE THE JOB ROUTE WORK
             params[:company_id] && @company = Company.find(params[:company_id])
             @jobs = @company.jobs  
     end
@@ -13,6 +13,11 @@ class JobsController < ApplicationController
     def show
         @company = Company.find(params[:company_id])
         @job = @company.jobs.find(params[:id])
+    end
+
+    def all_jobs
+        @jobs = Job.all_jobs
+        render :index
     end
 
     def new
