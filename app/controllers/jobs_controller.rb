@@ -2,7 +2,7 @@ class JobsController < ApplicationController
     
     before_action :redirect_if_not_logged_in
     before_action :find_job, only: [:show, :edit, :update, :destroy]
-    before_action :find_job, only: [:show, :edit, :destroy]
+    
 
     
     def index #ADD STUFF TO MAKE THE JOB ROUTE WORK
