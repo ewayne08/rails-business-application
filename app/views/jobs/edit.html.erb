@@ -2,11 +2,10 @@
 <div class="container">
 <h1 style="color: #501B1D; text-align:center">Edit job</h1>
 <div style="color: #501B1D; text-align:center">
-<%= render partial: "form", locals: { job: @job, url: job_path(@job), method: :patch, company_id: @company_id} %>
+<%= render partial: "form", locals: { job: @job, url: company_job_path(@job), method: :patch, company_id: @company_id} %>
 
 <br><br>
 <div style="list-style-type:none; color: #2E1114; text-align:center">
-<%= link_to "Click to view all jobs cast into the system...", recent_jobs_path, class: "btn" %>
 </div>
 </div>
 

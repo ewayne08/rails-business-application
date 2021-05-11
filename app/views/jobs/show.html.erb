@@ -15,8 +15,8 @@
       </div>
         <div style="color: #501B1D; text-align:center">
         <% if current_user.id == @job.user_id %>
-        <%= link_to "edit", edit_job_path(@job) %>
-          <%= link_to "delete", job_path(@job), method: 'DELETE' %>
+        <%= link_to "edit", edit_company_job_path(@job) %>
+          <%= link_to "delete", company_job_path(@job), method: 'DELETE' %>
           <% end %>
         </div>
 </div>
