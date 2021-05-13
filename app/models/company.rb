@@ -1,6 +1,5 @@
 class Company < ApplicationRecord
     #belongs_to :owner, class_name: "User", foreign_key: :user_id
-    belongs_to :user
     has_many :jobs 
     has_many :users, through: :jobs
     

@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
 
     def create
         @company = Company.new(company_params)
-        @company.owner = current_user
+        @company.user_id = current_user.id
         if @company.save 
             redirect_to company_path(@company)
         else
@@ -33,7 +33,8 @@ class CompaniesController < ApplicationController
 
 
     def edit
-        @company = current_user.companies.find(params[:id])
+        @company = Company.find_by(id: params[:id])
+        company_redirect_if_not_authorized
     end
 
     def update   
@@ -55,6 +56,13 @@ class CompaniesController < ApplicationController
     end
 
     private
+
+    def company_redirect_if_not_authorized
+        company = Company.find_by_id(params[:id])
+        if company || company.user_id != session["user_id"]
+            redirect_to companies_path
+        end
+    end
 
 
     def company_params

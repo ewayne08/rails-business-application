@@ -7,7 +7,7 @@
 <div class="container" style= "text-align:center">
 <h1 style="color: #2E1114; text-align:center">Edit Company</h1>
 
-    <% if @company.errors.any? %>
+    <% if @company && @company.errors.any? %>
     <div style="list-style-type:none; color: #2E1114; text-align:center" id="error explanation">
         <h2 style="list-style-type:none; color: #2E1114; text-align:center"><%= pluralize(@company.errors.count, "error") %> prevented this Company from being saved: </h2>
         <ul style="list-style-type:none; color: #2E1114; text-align:center">

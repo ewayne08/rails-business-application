@@ -7,7 +7,8 @@
   <p style="text-align:center"><img class="center, rounded-circle" height="200" width="300" src="<%= @user.profile_pic %>"></p>
   <br><br>
   <h1 style="color: #16A085;  text-align:center"><%= @user.bio %></h1>
-  <% @companies.each do |company| %>
+  <h1 style="color: #16A085;  text-align:center"> Companies You Created Jobs For: </h1>
+  <% @companies.uniq.each do |company| %>
 <h2> <li style="color: #0000A0;  text-align:center"><%= company.name.capitalize %></li> </h2>
 <% end %>
 <br>

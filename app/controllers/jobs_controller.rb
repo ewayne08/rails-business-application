@@ -38,6 +38,7 @@ class JobsController < ApplicationController
 
     def edit
         @job_id = params[:id]
+        job_redirect_if_not_authorized
     end
 
     def update
@@ -61,6 +62,14 @@ class JobsController < ApplicationController
     end
     
     private
+
+    def job_redirect_if_not_authorized
+        job = Job.find_by_id(params[:id])
+        if job || job.user_id != session["user_id"]
+            redirect_to companies_path
+        end
+    end
+
     def job_params
         params.require(:job).permit(:name, :category, :description, :company_id, company_attributes: [:id, :user_id, :name, :category])
     end
