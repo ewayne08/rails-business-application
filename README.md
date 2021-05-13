@@ -1,5 +1,17 @@
+Welcome to my project! This project was created for single 3rd party recruiting agencies. Essentially you can go on add the company your hiring for and you can also add jobs to other companies. Adding jobs to other companies allows multiple recruiters to fill multiple needs for large corporations!
+
+INSTALLATION GUIDE:
+Once you clone the program run bundle install, and then type rails s in the console. After you've done this type in localhost:3000 in your brower
 
 
-Things you may want to cover: 
-Welcome to Business-Application. You can start the program by bundle installing followed by rails s in the terminal. This application was inspired from the small start up I'm working for in my free time. We have 2 different AI's one is Ryder which collects data and one is Wesson which is a business management tool integrated with other tools. I thought of all the management we have to do and decided to make this small application which helps businesses/companies keep a list of jobs sorted. Wesson.AI is currently still in development and not yet launched. I think of this application as a very miny Wesson application or even a tool that can be connected to Wesson. I plan on making this an actual application whether it becomes part of Wesson or it's own seperate app. I also want to make my application collect data in the background so I know which companies are using my application and all the jobs they have, along with their R-Ratios and that stuff. Anyway start the application and take a look around!!! To exit the application hit control c in your termianl! Enjoy! 
+# Usage
+1. Run rake `db:migrate`
+2. Run `rails s`
+3. Launch [http://localhost:3000](http://localhost:3000) in your browser
+
+# Contributing
+Bug reports and pull requests are welcome at [https://github.com/ewayne08/rails-business-application](https://github.com/ewayne08/rails-business-application). Contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/).
+
+# License
+Distributed under the [MIT License](https://opensource.org/licenses/MIT)
 

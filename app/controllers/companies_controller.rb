@@ -34,7 +34,7 @@ class CompaniesController < ApplicationController
 
     def edit
         @company = Company.find_by(id: params[:id])
-        company_redirect_if_not_authorized
+        #company_redirect_if_not_authorized
     end
 
     def update   
